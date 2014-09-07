@@ -1,46 +1,99 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Data Blog</title>
-  <link rel="stylesheet" href="static/css/flexbox.css">
-  <link rel="stylesheet" href="static/css/datablog.css">
-</head>
-<body>
-  <ul class="nav">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About Us</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <div class="main">
-    <div class="col-a col" class="contact">
-      <h2>About Us</h2>
-      <p>We're using data to make your day better.</p>
-    </div>
-    <div class="col-b col" class="about">
-      <h2>Contact</h2>
-      <p>It would be super cool if this column was also helpful</p>
-      <a href="mailto:tylers.pile@gmail.com">email me</a>
-    </div>
-    <div class="col-c col" class="home">
-      <h2>Home</h2>
-      <p>Welcome to a data blog. <br>
-	This is currently a work in progress</p>
-    </div>
-  </div>
-  <footer>
-    <a href="http://www.linkedin.com/pub/tyler-brown/53/350/1a9/">
-      <img src="static/img/twitter-wrap.png" alt="Twitter logo" class="social-icon">
-    </a>
-    <a href="https://www.facebook.com/tyler.blue.18847">
-      <img src="static/img/facebook-wrap.png" alt="Facebook logo" class="social-icon">
-    </a>
-    <p> &copy; 2014 Tyler Brown.</p>
-  </footer>
-</body>
-</html>
-  
+  <head>
+    <style>
 
+  body {
+   font: 24px Helvetica;
+   background: #999999;
+  }
+
+  #main {
+   min-height: 800px;
+   margin: 0px;
+   padding: 0px;
+   display: -webkit-flex;
+   display:         flex;
+   -webkit-flex-flow: row;
+           flex-flow: row;
+   }
+ 
+  #main > article {
+   margin: 4px;
+   padding: 5px;
+   border: 1px solid #cccc33;
+   border-radius: 7pt;
+   background: #dddd88;
+   -webkit-flex: 3 1 60%;
+           flex: 3 1 60%;
+   -webkit-order: 2;
+           order: 2;
+   }
   
+  #main > nav {
+   margin: 4px;
+   padding: 5px;
+   border: 1px solid #8888bb;
+   border-radius: 7pt;
+   background: #ccccff;
+   -webkit-flex: 1 6 20%;
+           flex: 1 6 20%;
+   -webkit-order: 1;
+           order: 1;
+   }
   
+  #main > aside {
+   margin: 4px;
+   padding: 5px;
+   border: 1px solid #8888bb;
+   border-radius: 7pt;
+   background: #ccccff;
+   -webkit-flex: 1 6 20%;
+           flex: 1 6 20%;
+   -webkit-order: 3;
+           order: 3;
+   }
+ 
+  header, footer {
+   display: block;
+   margin: 4px;
+   padding: 5px;
+   min-height: 100px;
+   border: 1px solid #eebb55;
+   border-radius: 7pt;
+   background: #ffeebb;
+   }
+ 
+  /* Too narrow to support three columns */
+  @media all and (max-width: 640px) {
+  
+   #main, #page {
+    -webkit-flex-flow: column;
+            flex-flow: column;
+            flex-direction: column;
+   }
+
+   #main > article, #main > nav, #main > aside {
+    /* Return them to document order */
+    -webkit-order: 0;
+            order: 0;
+   }
+  
+   #main > nav, #main > aside, header, footer {
+    min-height: 50px;
+    max-height: 50px;
+   }
+  }
+
+ </style>
+  </head>
+  <body>
+ <header>header</header>
+ <div id='main'>
+    <article>article</article>
+    <nav>nav</nav>
+    <aside>aside</aside>
+ </div>
+ <footer>footer</footer>
+  </body>
+</html>
