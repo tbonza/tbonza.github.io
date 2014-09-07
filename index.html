@@ -4,37 +4,30 @@
 <head>
   <meta charset="utf-8">
   <title>Data Blog</title>
+  <link rel="stylesheet" href="static/css/flexbox.css">
   <link rel="stylesheet" href="static/css/datablog.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <header>
-    <a href="index.html" id="logo">
-      <h1>Data Blog</h1>
-      <h2>Using data to make your day better.</h2>
-    </a>
-    <nav>
-      <ul>
-	<li><a href="#about">About Us</a></li>
-	<li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  <div id="wrapper">
-    <h1>Data Blog</h1>
-    <p>Welcome to a data blog. This is currently a work in progress</p>
-    <ul>
-      <li>Story 1</li>
-      <li>Story 2</li>
-    </ul>
-  </div>
-  <div id="about">
-    <h1>About Us</h1>
-    <p>We're using data to make your day better.</p>
-  </div>
-  <div id="contact">
-    <h1>Contact</h1>
-    <a href="mailto:tylers.pile@gmail.com">email me</a>
+  <ul class="nav">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="main">
+    <div class="col-a col" class="contact">
+      <h2>About Us</h2>
+      <p>We're using data to make your day better.</p>
+    </div>
+    <div class="col-b col" class="about">
+      <h2>Contact</h2>
+      <p>It would be super cool if this column was also helpful</p>
+      <a href="mailto:tylers.pile@gmail.com">email me</a>
+    </div>
+    <div class="col-c col" class="home">
+      <h2>Home</h2>
+      <p>Welcome to a data blog. <br>
+	This is currently a work in progress</p>
+    </div>
   </div>
   <footer>
     <a href="http://www.linkedin.com/pub/tyler-brown/53/350/1a9/">
@@ -47,3 +40,7 @@
   </footer>
 </body>
 </html>
+  
+
+  
+  
