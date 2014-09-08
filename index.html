@@ -1,99 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="en">
-  <head>
-    <style>
-
-  body {
-   font: 24px Helvetica;
-   background: #999999;
-  }
-
-  #main {
-   min-height: 800px;
-   margin: 0px;
-   padding: 0px;
-   display: -webkit-flex;
-   display:         flex;
-   -webkit-flex-flow: row;
-           flex-flow: row;
-   }
- 
-  #main > article {
-   margin: 4px;
-   padding: 5px;
-   border: 1px solid #cccc33;
-   border-radius: 7pt;
-   background: #dddd88;
-   -webkit-flex: 3 1 60%;
-           flex: 3 1 60%;
-   -webkit-order: 2;
-           order: 2;
-   }
+<head>
+  <meta charset="utf-8">
+  <title>Data Blog</title>
+  <link rel="stylesheet" href="static/css/flexbox.css">
+</head>
+<body>
   
-  #main > nav {
-   margin: 4px;
-   padding: 5px;
-   border: 1px solid #8888bb;
-   border-radius: 7pt;
-   background: #ccccff;
-   -webkit-flex: 1 6 20%;
-           flex: 1 6 20%;
-   -webkit-order: 1;
-           order: 1;
-   }
   
-  #main > aside {
-   margin: 4px;
-   padding: 5px;
-   border: 1px solid #8888bb;
-   border-radius: 7pt;
-   background: #ccccff;
-   -webkit-flex: 1 6 20%;
-           flex: 1 6 20%;
-   -webkit-order: 3;
-           order: 3;
-   }
- 
-  header, footer {
-   display: block;
-   margin: 4px;
-   padding: 5px;
-   min-height: 100px;
-   border: 1px solid #eebb55;
-   border-radius: 7pt;
-   background: #ffeebb;
-   }
- 
-  /* Too narrow to support three columns */
-  @media all and (max-width: 640px) {
-  
-   #main, #page {
-    -webkit-flex-flow: column;
-            flex-flow: column;
-            flex-direction: column;
-   }
 
-   #main > article, #main > nav, #main > aside {
-    /* Return them to document order */
-    -webkit-order: 0;
-            order: 0;
-   }
+<div class="page-wrap">
   
-   #main > nav, #main > aside, header, footer {
-    min-height: 50px;
-    max-height: 50px;
-   }
-  }
-
- </style>
-  </head>
-  <body>
- <header>header</header>
- <div id='main'>
-    <article>article</article>
-    <nav>nav</nav>
-    <aside>aside</aside>
- </div>
- <footer>footer</footer>
-  </body>
+  <section class="main-content">
+    <h1>Data Blog</h1>
+    <p><strong>Using data to make your day better.</strong></p>
+    <p>Definitely a work in progress. At this point, we're just trying out
+    different themes for the site.</p>
+    <p>Here's a second paragraph.</p>
+  </section>
+  
+  <nav class="main-nav">
+    <h2>Nav</h2>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Clients</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+  </nav>
+  
+  <aside class="main-sidebar">
+    <h2>Sidebar</h2>
+    <p>I am a rather effortless column of equal height.</p>
+  </aside>
+    
+</div>
+</body>
 </html>
